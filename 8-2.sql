@@ -1,0 +1,10 @@
+USE mysql;
+SELECT HOST, USER, authentication_string FROM USER;
+
+CREATE USER 'root'@'IP' identified by 'PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'IP' WITH GRANT OPTION;
+
+SHOW GRANTS FOR 'root'@'IP';
+
+DROP DATABASE IF EXISTS soloDB;
+CREATE DATABASE soloDB;
